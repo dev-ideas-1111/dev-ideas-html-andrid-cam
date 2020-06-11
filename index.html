@@ -1,0 +1,66 @@
+<html lang=”en”>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Name of your awesome camera app -->
+    <title>ASI Camera App</title>
+
+    <!-- Link to your main style sheet-->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        #overlay {
+            position: absolute;
+            display:inherit;
+            width: 30%;
+            height: 25%;
+            top: 35%;
+            left: 35%;
+            right: auto;
+            bottom: auto;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2;
+            cursor: pointer;
+            border: red;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="overlay" onclick="on()"></div>
+    
+    <!-- Camera -->
+    <main id="camera">
+        
+        <!-- Camera sensor -->
+        <canvas id="camera--sensor"></canvas>
+        
+        <!-- Camera view -->
+        <video id="camera--view"; autoplay playsinline></video>
+        
+        <!-- Camera output -->
+        <img src="//:0" alt="" id="camera--output">
+        
+        <!-- Camera trigger -->
+        <button id="camera--trigger">Take a picture</button>
+        
+    </main>
+    
+    <!-- Reference to your JavaScript file -->
+    <script src="app.js"></script>
+    
+    <script>
+        
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+
+//    function off() {
+//      document.getElementById("overlay").style.display = "none";
+//    }
+    </script>
+</body>
+</html>
